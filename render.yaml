@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: repurpose-bot
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: NUM_VARIATIONS
+        value: "20"
